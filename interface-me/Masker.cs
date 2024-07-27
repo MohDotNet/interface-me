@@ -26,29 +26,5 @@ namespace interface_me
 
             return mask;
         }
-
-
-        public static string ActivationMask<T>(T mask) where T : class
-        {
-            var entity = mask as IActivationPin;
-            
-            return entity.activation.ToMasked();
-        }
-
-        public static string pinMask<T>(T mask) where T : class
-        {
-            var entity = mask as IPin;
-
-            return entity.pin.ToMasked();
-        }
-
-        public static string DigiMask<T>(T mask) where T : class
-        {
-            var entity = mask as IDigiPin;
-
-            return entity.digiPin.ToMasked();
-        }
     }
-
-
 }
